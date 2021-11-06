@@ -1,0 +1,26 @@
+Tugas 1 KIJ (revisi 2)
+
+- implementasi 3DES dengan 2 keys dan 3 keys..
+
+    def 3DES_2key_encrypt(k1, k2, plaintext)
+    def 3DES_2key_decrypt(k1, k2, plaintext)
+
+    def 3DES_3key_encrypt(k1, k2, k3, plaintext)
+    def 3DES_3key_decrypt(k1, k2, k3, plaintext)
+
+- implementasi Cipher Block Chaining Mode
+
+    def cbc_encrypt(k, iv, plaintext)
+    def cbc_decrypt(k, iv, plaintext)
+
+- implementasi Counter Mode
+
+    def ctr_encrypt(k, iv, plaintext)
+    def ctr_decrypt(k, iv, plaintext)
+
+Masing-masing bisa Enkrip dan bisa Dekrip
+bahasa implementasi : python3
+library: menggunakan SDES di sdes.py
+satu kelompok ada 4-5 mahasiswa
+
+(waktu 1 minggu, minggu depan demo)
