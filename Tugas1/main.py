@@ -59,14 +59,12 @@ def cbc_encrypt(k, iv, plaintext):
         if (ctr == 0):
             i = ord(i) ^ iv
             i = encrypt(k, i)
-            i = i << 1
             ctr = 1
             textToProcess += chr(i)
 
         else:
-            i = ord(i) ^ ord(plaintext[index-1])
+            i = ord(i) ^ ord(textToProcess[index-1])
             i = encrypt(k, i)
-            i = i << 1
             textToProcess += chr(i)
         index += 1
     
@@ -82,16 +80,16 @@ def cbc_decrypt(k, iv, ciphertext):
     textToProcess = ""
     for i in ciphertext:
         if (ctr == 0):
-            i = ord(i) >> 1
+            i = ord(i)
             i = decrypt(k, i)
             i = i ^ iv
             ctr = 1
             textToProcess += chr(i)
 
         else:
-            i = ord(i) >> 1
+            i = ord(i)
             i = decrypt(k, i)
-            i = i ^ ord(plaintext[index-1])
+            i = i ^ ord(ciphertext[index-1])
             textToProcess += chr(i)
         index += 1
             
