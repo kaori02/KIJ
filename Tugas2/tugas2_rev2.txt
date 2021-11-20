@@ -1,0 +1,25 @@
+Tugas 2 KIJ (revisi 2)
+
+1. implementasi MAC Based Block Cipher (DAA), lihat gambar 12.7. (hal 373)
+Gunakan asumsi yang diperlukan, agar tugas ini bisa dikerjakan.
+Jelaskan mengapa anda memerlukan asumsi tsb. 
+(seperti ukuran dari hashnya?)
+
+	def MAC(K, MSG) -> h ?
+
+2. gunakan fungsi MAC yang digunakan di nomor 1, untuk implementasi:
+
+  - internal error control (gambar 12.2.a) (hal 360)
+
+	def enkrip_message(K, M) -> C
+	def dekrip_message(K, C) -> (M, valid?)
+
+  - external error control (gambar 12.2.b)
+
+	def enkrip_message(K, M) -> C
+	def dekrip_message(K, C) -> (M, valid?)
+
+bahasa implementasi : python3
+library: menggunakan SDES di sdes.py (tugas 1)
+satu kelompok ada 4-5 mahasiswa
+dikumpulkan minggu depan..

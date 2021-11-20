@@ -26,7 +26,7 @@ def tripleDES2key(key1, key2, plaintext):
     for i in plaintext:
       a = encrypt3des2key(key1, key2, i)
       b = decrypt3des2key(key1, key2, a)
-      print(i, " - ", b)
+      print(i, " - ", a, " - ", b)
 # ---------------------------------------------------------
 def encrypt3des3key(key1, key2, key3, plaintext):
     """Encrypt plaintext with given key"""
@@ -49,7 +49,7 @@ def tripleDES3key(key1, key2, key3, plaintext):
     for i in plaintext:
       a = encrypt3des3key(key1, key2, key3, i)
       b = decrypt3des3key(key1, key2, key3, a)
-      print(i, " - ", b)
+      print(i, " - ", a, " - ", b)
 # ------------------------------------------------------------
 def cbc_encrypt(k, iv, plaintext):
     ctr = 0
