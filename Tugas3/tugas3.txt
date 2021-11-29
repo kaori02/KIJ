@@ -1,0 +1,18 @@
+TUGAS 3 KIJ (revisi 1)
+
+Implementasi Digital Signature dari Gambar 13.3a (RSA Approach).
+
+Alice mengirimkan pesan dan digital signature ke Bob.
+
+> Alice: buat private key dan public key. Diasumsikan bahwa PublicKey-Alice
+  sudah diterima oleh bob.
+
+> Alice: buat hash dari pesan M lalu di enkrip dengan PrivateKey-Alice
+
+> Alice: gabungkan ke pesan lalu kirimkan ke Bob
+
+> Bob : menerima pesan dari alice. Verify bahwa pesan tsb adalah valid
+
+
+- gunakan rsa dari rsa_python.pyhon
+- gunakan hashlib dari library standar
