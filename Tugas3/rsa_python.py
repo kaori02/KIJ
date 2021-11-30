@@ -108,13 +108,12 @@ if __name__ == '__main__':
     print("Private: ",private_key)
 
     st = hash(message)
-    print("st : " + st)
     
     ctext = encrypt(st, private_key)
 
     padding = bytes("||", encoding='UTF-8')
     result = [message, padding, ctext]
-    print("result :")
+    print("\nTo send :")
     print(result)
 
     # diterima
@@ -123,6 +122,7 @@ if __name__ == '__main__':
 
     st2 = hash(to_hash)
     resulttext = decrypt(to_decrypt, public_key)
-    print("\nresulttext : " + resulttext)
+    print("\nhashed message\t: " + st)
+    print("result text\t: " + resulttext, end="\n\n")
 
-    if (resulttext == st2) : print("valid")
+    if (resulttext == st2) : print("VALID")
